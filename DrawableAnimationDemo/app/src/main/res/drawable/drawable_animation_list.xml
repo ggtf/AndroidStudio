@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    属性含义:
+    1.oneshot boolean true代表动画只执行一次;false代表动画循环执行
+    2.visible boolean 对应setVisible(boolean,boolean)
+    3.variablePadding boolean
+    4.drawable Drawable资源的引用
+    5.duration 动画时间 (毫秒)
+
+-->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="false"
+                android:variablePadding="true"
+                android:visible="true"
+    >
+    <item
+        android:drawable="@mipmap/ic_launcher"
+        android:duration="1000"
+        />
+    <item
+        android:drawable="@mipmap/icon1"
+        android:duration="1000"
+        />
+    <item
+        android:drawable="@mipmap/icon2"
+        android:duration="1000"
+        />
+    <item
+        android:drawable="@mipmap/icon3"
+        android:duration="1000"
+        />
+    <item
+        android:drawable="@mipmap/icon6"
+        android:duration="1000"
+        />
+    <item
+        android:drawable="@mipmap/icon4"
+        android:duration="1000"
+        />
+    <item
+        android:drawable="@mipmap/icon5"
+        android:duration="1000"
+        />
+
+</animation-list>
