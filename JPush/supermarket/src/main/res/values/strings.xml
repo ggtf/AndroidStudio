@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Supermarket</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="product_icon">product_icon</string>
+</resources>

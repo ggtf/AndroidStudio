@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:background">@drawable/background_color</item>
+    </style>
+    <!--
+        1.自定义ActionBar的样式Style需要重写actionBarStyle属性;
+        2.改变background属性时,也需要重写background属性;
+        3.当使用到navigation tabs 或者 split actionbar时,也可以分别重写定义backgroundStacked 和 backgroundSplit属性;
+        4.自定义Theme,选一个合适的Parent Theme很重要,这样可以继承ParentTheme的属性,来定义;
+    -->
+
+    <!--
+        1.Android 3.0/以上 直接修改继承的ParentTheme中想要修改的属性
+    -->
+    <!-- 定义ActionBar 的style样式-->
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+    <item name="android:background">@mipmap/float_window</item>
+    </style>
+
+</resources>
