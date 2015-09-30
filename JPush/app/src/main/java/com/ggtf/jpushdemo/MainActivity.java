@@ -46,4 +46,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this,com.example.jpushdemo.MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }
