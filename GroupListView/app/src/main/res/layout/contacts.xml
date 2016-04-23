@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="8dp"
+              android:padding="5dp"
+    >
+    <CheckBox
+        android:id="@+id/contacts_checked_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:checked="false"
+        android:visibility="visible"
+        android:focusable="false"
+        android:clickable="true"
+        />
+    <TextView
+        android:id="@+id/contacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:text="风云"
+        android:drawablePadding="10dp"
+        android:textColor="#ff1310"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:drawableLeft="@drawable/contacts_icon"
+        />
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#ffd855"
+            />
+        <GridView
+            android:id="@+id/grid_view_ad_point"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:numColumns="3"
+            android:stretchMode="spacingWidth"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="30dp"
+            />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fragment\nB"
+        android:gravity="center_horizontal"
+        android:textColor="#ff3009"
+        android:textSize="35sp"
+        />
+
+</LinearLayout>

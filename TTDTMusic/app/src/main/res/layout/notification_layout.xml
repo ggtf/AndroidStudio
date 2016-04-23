@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#00001f"
+              android:orientation="horizontal"
+              android:gravity="center_vertical"
+
+    >
+    <ImageView
+        android:id="@+id/singer_head"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@mipmap/img_appwidget_album_cover_4x4"
+        android:scaleType="fitXY"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/song_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="歌曲名"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:gravity="start|center_vertical"
+                />
+            <ImageView
+                android:id="@+id/notification_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/delete_image_selector"
+                android:clickable="true"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/singer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="歌手名"
+            android:singleLine="true"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:gravity="start|center_vertical"
+            />
+        <TextView
+            android:id="@+id/next_song"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="下一首歌曲名"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:gravity="start|center_vertical"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            >
+            <ImageView
+                android:id="@+id/notification_pre"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:src="@drawable/pre_image_selector"
+                />
+
+            <ImageView
+                android:id="@+id/notification_play"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/play_image_selector"
+                />
+
+            <ImageView
+                android:id="@+id/notification_next"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/next_image_selector"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

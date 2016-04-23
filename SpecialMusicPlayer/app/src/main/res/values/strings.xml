@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SpecialMusicPlayer</string>
+    <string name="mm_header_name">鬼谷腾风</string>
+    <!--Menu Function-->
+    <string name="menu_function_0">仅WIFI联网</string>
+    <string name="menu_function_1">最美推荐</string>
+    <string name="menu_function_2">主题渲染</string>
+    <string name="menu_function_3">设置</string>
+    <string name="menu_function_4">退出</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_action">菜\n单</string>
+</resources>

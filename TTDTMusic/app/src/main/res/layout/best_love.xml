@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/my_best_love"
+                android:clickable="true"
+
+    >
+
+    <ImageView
+        android:id="@+id/item_love_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/love_music"
+        android:background="#c1ff9505"
+        android:layout_marginRight="10dp"
+        />
+    <TextView
+        android:id="@+id/item_love_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的最爱"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/item_love_icon"
+        android:gravity="center_vertical"
+        android:textColor="#000"
+        android:drawableRight="@mipmap/img_setting_right_arrow"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/item_love_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_love_icon"
+        android:layout_below="@id/item_love_title"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:text="0首"
+        />
+    <TextView
+        android:id="@+id/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#ababab"
+        android:layout_toRightOf="@id/item_love_icon"
+        android:layout_alignBottom="@id/item_love_icon"
+        />
+
+</RelativeLayout>

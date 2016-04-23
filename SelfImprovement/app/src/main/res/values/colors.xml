@@ -1,0 +1,12 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="recycler_view_bg">#3F0000FF</color>
+    <color name="black">#FF000000</color>
+    <color name="light_blue">#880000FF</color>
+    <color name="light_blue_half">#440000FF</color>
+    <color name="light_red">#88FF0000</color>
+    <color name="light_red_half">#44FF0000</color>
+
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    >
+    <!--内容菜单的布局-->
+    <FrameLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#65b0ff"
+        >
+
+        <Button
+            android:id="@+id/button_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showSideSilppingMenu"
+            android:text="显示左边侧滑菜单"
+            />
+
+        <Button
+            android:id="@+id/button_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:onClick="showSideSilppingMenu"
+            android:text="显示右边侧滑菜单"
+            />
+    </FrameLayout>
+    <!--侧滑菜单布局-左边侧滑菜单-->
+    <LinearLayout
+        android:id="@+id/drawer_left"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#ff4400"
+        android:orientation="vertical"
+        >
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+    <!--侧滑菜单布局-右边侧滑菜单-->
+    <LinearLayout
+        android:id="@+id/drawer_right"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#ff540b"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            />
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

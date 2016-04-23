@@ -1,10 +1,20 @@
 <resources>
 
+    <style name="ThemeCustom" parent="Theme.AppCompat.Light.DarkActionBar"/>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="android:actionBarStyle">@style/MyActionBar</item>
-        <item name="android:background">@drawable/background_color</item>
+        <item name="android:background">#ff8216</item>
+
+        <!--
+        设置ActionBar的模式为Overlay模式,这样将会可以让Activity占据整个手机屏幕,而且进行ActionBar的
+        show()或者hind()可见状态的切换时,不会再进行布局的重写计算和重绘;
+        ActionBar在Activity的布局之上;
+        3.0version之下2.1version之上需要增加如下属性设置
+       <item name="windowActionBarOverlay">true</item>
+        -->
+
+        <item name="android:windowActionBarOverlay">true</item>
     </style>
     <!--
         1.自定义ActionBar的样式Style需要重写actionBarStyle属性;
@@ -15,10 +25,13 @@
 
     <!--
         1.Android 3.0/以上 直接修改继承的ParentTheme中想要修改的属性
+        (未知情况,暂时使用不了,只能修改整体Theme的background属性,同时修改的是Activity和ActionBar的背景颜色)
     -->
     <!-- 定义ActionBar 的style样式-->
     <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
-    <item name="android:background">@mipmap/float_window</item>
+    <item name="android:background">@android:color/holo_blue_bright</item>
     </style>
+
+
 
 </resources>

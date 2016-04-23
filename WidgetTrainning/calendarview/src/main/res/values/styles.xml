@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CalendarView">
+        <attr name="normalTextColor" format="color"/>
+        <attr name="selectedBackgroundColor" format="color"/>
+        <attr name="selectedDayTextColor" format="color"/>
+        <attr name="textSize" format="dimension"/>
+    </declare-styleable>
+</resources>

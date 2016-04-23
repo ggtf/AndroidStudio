@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="l2r">300</integer>
+    <integer name="float_action_alpha">300</integer>
+    <integer name="float_action_scale">300</integer>
+    <integer name="float_action_rotate">300</integer>
+    <integer name="float_action_translate">300</integer>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:firstDayOfWeek="1"
+        android:minDate="01/01/1970"
+        android:focusedMonthDateColor="@color/textAppearance"
+        android:maxDate="01/01/2020"
+        android:selectedDateVerticalBar="@drawable/vertical_bar"
+        android:selectedWeekBackgroundColor="#ff5a12"
+        android:showWeekNumber="true"
+        android:weekSeparatorLineColor="#ff5a12"
+        android:dateTextAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+        >
+    </CalendarView>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!--
+        TableLayout 表格布局;
+        android:stretchColumns="1,2,3"列可伸展,列与列之间必须用逗号隔开
+        android:shrinkColumns="1,2,3"列可收缩,列与列之间必须用逗号隔开
+        android:collapseColumns="1,3"隐藏列,列与列之间必须用逗号隔开
+        android:layout_column="1"内部控件TableRow属性，显示在第几列
+        android:layout_span="2"内部控件TableRow属性，占据几列
+    -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1,2,3"
+        android:stretchColumns="1,2,3"
+        >
+        <Button
+            android:background="#00f"
+            />
+        <TableRow>
+            <Button
+                android:text="AAAAAA"
+                />
+            <Button
+                android:singleLine="true"
+                android:text="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                />
+            <Button
+                android:text="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_column="1"
+                android:layout_span="2"
+                />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

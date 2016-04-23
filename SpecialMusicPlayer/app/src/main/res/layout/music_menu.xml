@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/id_mm"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mm_bg"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/id_mm_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mm_header"
+        android:paddingBottom="@dimen/mm_header_padding_bottom"
+        android:paddingTop="@dimen/mm_header_padding_top"
+        >
+
+        <ImageView
+            android:id="@+id/id_mm_user"
+            android:layout_width="@dimen/mm_header_user_width"
+            android:layout_height="@dimen/mm_header_user_height"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@null"
+            android:src="@mipmap/ic_launcher"
+            />
+
+        <TextView
+            android:id="@+id/id_mm_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_mm_user"
+            android:gravity="center"
+            android:padding="@dimen/mm_header_name_padding"
+            android:text="@string/mm_header_name"
+            android:textColor="@color/mm_header_name"
+            android:textSize="@dimen/mm_header_name_size"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/id_mm_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/mm_list_divider"
+        android:dividerHeight="@dimen/mm_divider_height"
+        android:background="@drawable/menu_list_bg"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        />
+
+</LinearLayout>

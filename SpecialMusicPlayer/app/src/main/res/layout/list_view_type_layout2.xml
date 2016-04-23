@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/id_list_view_type_2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_view_type_2_height"
+    android:background="@color/tv_list_view_type2_bg"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/list_view_type_2_padding_tb"
+    android:paddingTop="@dimen/list_view_type_2_padding_tb"
+    android:weightSum="5"
+    >
+
+    <TextView
+        android:id="@+id/id_most_like"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="@dimen/tv_size_type_2"
+        android:textColor="@color/list_view_type2_tv_color"
+        android:text="最爱"
+        android:gravity="center"
+        android:drawableTop="@drawable/drawable_top"
+        />
+
+    <TextView
+        android:id="@+id/id_most_current"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="@dimen/tv_size_type_2"
+        android:textColor="@color/list_view_type2_tv_color"
+        android:text="最近"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableTop="@drawable/drawable_top"
+        />
+
+    <TextView
+        android:id="@+id/id_most_times"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="@dimen/tv_size_type_2"
+        android:textColor="@color/list_view_type2_tv_color"
+        android:text="最多"
+        android:gravity="center"
+        android:drawableTop="@drawable/drawable_top"
+        />
+</LinearLayout>

@@ -1,8 +1,10 @@
 package com.ggtf.androidtraining;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -30,10 +32,11 @@ public class MainActivity extends AppCompatActivity {
          * Theme主题实现Theme.AppCompat主题;
          *
          * ActionBar布局定义在res/menu文件目录下;
-         *
+         * ActionBar的show()/hide()方法指定ActionBar的可见性;
          *
          *
          */
+
     }
 
     /**
@@ -41,24 +44,38 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void sendMessage(View view) {
-        /**
-         * 参数1:Context 上下文;
-         * 参数2:Class 类对象;
-         */
-        Intent intent = new Intent(this,DisplayMessageActivity.class);
-        /**
-         * findViewById();依据资源Id获取对应对象实例;
-         */
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        /**
-         * Intent 携带数据,键值对;
-         */
-        intent.putExtra(EXTRA_MESSAGE, message);
-        /**
-         * 传递Intent实例对象
-         */
-        startActivity(intent);
+        int id = view.getId();
+        switch (id){
+            case R.id.btn_send:
+                /**
+                 * 参数1:Context 上下文;
+                 * 参数2:Class 类对象;
+                 */
+                Intent intent = new Intent(this,DisplayMessageActivity.class);
+                /**
+                 * findViewById();依据资源Id获取对应对象实例;
+                 */
+                EditText editText = (EditText) findViewById(R.id.edit_message);
+                String message = editText.getText().toString();
+                /**
+                 * Intent 携带数据,键值对;
+                 */
+                intent.putExtra(EXTRA_MESSAGE, message);
+                /**
+                 * 传递Intent实例对象
+                 */
+                startActivity(intent);
+                break;
+            case R.id.action_bar_show_hide:
+                Log.i("Info","ActionBar");
+                ActionBar actionBar = getActionBar();
+                if (actionBar != null){
+                    Log.i("Info","ActionBar hide");
+                    actionBar.hide();
+                }
+                break;
+        }
+
     }
 
     @Override

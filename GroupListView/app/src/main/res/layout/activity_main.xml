@@ -1,0 +1,32 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <com.ggtf.grouplistview.custom.CircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/icon"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#ff8216"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"
+            android:onClick="imageClick"
+            />
+        <com.ggtf.grouplistview.custom.CustomListView
+            android:id="@+id/list_view_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+
+
+
+</ScrollView>

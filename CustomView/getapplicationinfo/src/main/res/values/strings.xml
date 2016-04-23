@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GetApplicationInfo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="launcher_activity">启动Activity名</string>
+</resources>

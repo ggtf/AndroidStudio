@@ -2,8 +2,14 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="#1c68ff"
               android:orientation="horizontal"
+              android:paddingTop="?android:attr/actionBarSize"
     >
+    <!--
+    paddingTop的数值为ActionBar的大小,
+    这样可以使得一些控件会一直在ActionBar之下;
+    -->
 <!--
 id 在app编译时,会在gen/R.java文件中创建新的资源ID指向该对象;
 -->
@@ -15,9 +21,17 @@ id 在app编译时,会在gen/R.java文件中创建新的资源ID指向该对象;
         android:hint="@string/edit_message"
         />
     <Button
+        android:id="@+id/btn_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
+        android:onClick="sendMessage"
+        />
+    <Button
+        android:id="@+id/action_bar_show_hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show/hide"
         android:onClick="sendMessage"
         />
 

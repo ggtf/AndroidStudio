@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="tv_show">#FF0000F0</color>
+    <color name="tv_bg_normal">#88FF0000</color>
+    <color name="tv_bg_normal_stroke">#33FF0000</color>
+    <color name="tv_bg_pressed">#8800FF00</color>
+    <color name="tv_bg_pressed_stroke">#3300FF00</color>
+    <color name="divider">#FFF555FF</color>
+</resources>

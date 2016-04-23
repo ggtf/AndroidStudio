@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ggtf.customview.CustomCounterView xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:id="@+id/index_show"
+                                       android:layout_width="50dp"
+                                       android:layout_height="50dp"
+                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                       app:bg_color="#ffea85"
+                                       app:text="A"
+                                       app:text_color="#ff1917"
+                                       app:bg_shape="round_rect"
+                                       app:text_size="25sp"
+    >
+
+</com.ggtf.customview.CustomCounterView>

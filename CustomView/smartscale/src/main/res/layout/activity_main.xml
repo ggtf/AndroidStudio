@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/com.ggtf.smartscale"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+
+    >
+<!--
+
+    <TextView
+        android:layout_width="@dimen/largest_width"
+        android:layout_height="50dp"
+        android:background="#f00"
+        android:gravity="right|center_vertical"
+        android:text="AppleApple"
+        android:textColor="#fff"
+        android:textSize="18sp"
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f0f"
+        android:gravity="right|center_vertical"
+        android:text="AppleApple"
+        android:textColor="#000"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ff0"
+        android:gravity="right|center_vertical"
+        android:text="AppleApple"
+        android:textColor="#f00"
+        android:textSize="18sp"
+        />-->
+
+    <com.ggtf.smartscale.RefreshListView
+        android:id="@+id/refresh_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:loadingStr="@string/refresh_data"
+        app:downToUpLoadingImg="@mipmap/ic_launcher"
+        app:upToDownLoadingImg="@mipmap/ic_launcher"
+        />
+
+
+</LinearLayout>

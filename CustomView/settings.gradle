@@ -1,0 +1,1 @@
+include ':app', ':activitysliding', ':showhead', ':multipleclickabletextview', ':switchtabcustom', ':getapplicationinfo', ':sharesdkapp', ':thridlogin', ':toucheventdemo', ':floatingwindow', ':zxingdemo', ':workuluk', ':smartscale'

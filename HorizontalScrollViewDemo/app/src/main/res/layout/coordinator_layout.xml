@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!--向上滚动隐藏指定View；通过layout_scrollFlags属性设置-->
+    <!--AppBarLayout-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!--Toolbar-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            />
+        <!--TabLayout-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:tabIndicatorColor="#ffff1a13"
+            app:tabSelectedTextColor="#ffff00ff"
+            app:tabTextColor="#ff00ff00"
+            />
+    </android.support.design.widget.AppBarLayout>
+    <!--
+        ViewPager
+        app:layout_behavior=""@string/appbar_scrolling_view_behavior""属性解释：
+        属性值实际上是一个完整的class名字，"@string/appbar_scrolling_view_behavior"是Android Support Library
+       定义后值，可以直接使用；这个Behavior的class是真正控制滚动时候View的滚动行为的，我们可以继承Behavior这个class去实现特有的滚动行为；
+       ViewPager中放置RecyclerView（可滚动的View）
+
+    -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/ThemeCustom">
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -20,6 +20,7 @@
             android:name=".DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
             android:parentActivityName=".MainActivity" >
+            <!--指定使用ActionBar栏中回退键返回到哪一个Activity-->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ggtf.androidtraining.MainActivity" />

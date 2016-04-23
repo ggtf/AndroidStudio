@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/id_list_view_footer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_view_footer_height"
+    android:textColor="@color/list_view_footer_tv_color"
+    android:background="@color/tv_list_view_footer_bg"
+    android:gravity="center"
+    android:textStyle="italic"
+    android:textSize="@dimen/tv_size_footer"
+    android:text="属于自己的个性音乐播放器"
+  />

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FloatingWindow</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="floating_activity">开启Activity悬浮窗</string>
+    <string name="floating_application">开启Application悬浮窗</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="from_left_duration">300</integer>
+    <integer name="to_bottom_duration">1000</integer>
+    <integer name="to_right_duration">1000</integer>
+    <integer name="to_up_duration">1000</integer>
+    <integer name="scale_rotate_duration">1000</integer>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 定义分割线的样式 -->
+        <item name="android:listDivider">@drawable/divider_line</item>
+    </style>
+
+</resources>

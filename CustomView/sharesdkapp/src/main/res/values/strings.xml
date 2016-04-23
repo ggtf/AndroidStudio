@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ShareSDKApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="share">分享</string>
+    <string name="login">Login登录</string>
+</resources>

@@ -1,0 +1,166 @@
+public class MyButton extends View {
+
+	public static int STRAT_DRAGGIG_OFFSET=20;
+	//三个图片
+    private String image_State1="";
+    private String image_State2="";
+    private String image_State3="";
+
+    //当前的状态
+    private int currentState=0;
+    private boolean isDown=false;
+    private boolean isChecked=false;
+
+    private  Point offsetpos=new Point();
+
+    //和拖动有关的数据
+    //按下的点
+    private Point downPos=new Point();
+    //Action_MOVE产生的点
+    private Point lastPos=new Point();
+
+    //是否正在拖动
+    private boolean isDragging=false;
+    //是否已经出发LongClick
+    private boolean isLongClicked=false;
+
+	public MyButton(Context context) {
+		super(context);
+		this.setClickable(true);
+		this.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if(isDragging|| isLongClicked) return;
+				isChecked=!isChecked;
+				onClicked();
+			}});
+		this.setLongClickable(true);
+		this.setOnLongClickListener(new OnLongClickListener(){
+
+			@Override
+			public boolean onLongClick(View v) {
+				// TODO Auto-generated method stub
+				if(isDragging) return false;
+				onLongClicked();
+				isLongClicked=true;
+				return false;
+			}});
+		image_State1="com.example.heartbeating/images/1.png";
+		image_State2="com.example.heartbeating/images/2.png";
+		image_State3="com.example.heartbeating/images/3.png";
+		// TODO Auto-generated constructor stub
+	}
+
+	//长按事件函数
+	public void onLongClicked(){}
+	//点击事件函数
+	public void onClicked(){}
+	//开始拖动函数
+	public void onStartDragging(int x,int y,int x1,int y1){
+		offsetpos.set(x1-x, y1-y);
+
+	}
+	//正在拖动函数
+	public void onDragging(int x,int y,int x1,int y1){
+		offsetpos.set(x1-x, y1-y);
+	}
+	//拖动停止函数
+	public void onDropped(int x,int y,int x1,int y1){
+		//offsetpos.set(x1-x, y1-y);
+		this.offsetpos.set(0, 0);
+	}
+
+    @Override public void onDraw(Canvas canvas){
+    	String imgpath=image_State1;
+    	//如果是check的状态，则直接选择图3
+    	if(isChecked) imgpath=image_State3;
+    	else {
+    		//
+    		if (this.isDown){
+    			imgpath=image_State2;
+    		}
+    	}
+
+    	canvas.translate(this.offsetpos.x, this.offsetpos.y);
+
+    	Bitmap bmp=getImageFromAssets(imgpath);
+    	if(bmp!=null){
+        	Rect r=new Rect(0,0,bmp.getWidth(),bmp.getHeight());
+        	Rect r1=new Rect(0,0,this.getWidth(),this.getHeight());
+        	canvas.drawBitmap(bmp, r, r1, new Paint());
+        	bmp.recycle();
+    	}
+
+    }
+
+
+    @Override public boolean onTouchEvent(MotionEvent event){
+
+    	int x=(int)event.getX(),y=(int)event.getY();
+
+    	switch(event.getAction()){
+    	case MotionEvent.ACTION_DOWN:
+    		//初始化
+    		this.isDown=true;
+    		isLongClicked=false;
+    		this.downPos.set(x, y);
+    		this.lastPos.set(x, y);
+    		this.invalidate();
+    		break;
+    	case MotionEvent.ACTION_MOVE:
+    		if(lastPos.equals(x, y)) return true;
+    		if(this.isDragging){
+    			//执行拖动操作
+    			this.onDragging(downPos.x, downPos.y, x, y);
+    		}
+    		else{
+    			float a=(downPos.x-x);
+    			float b=(downPos.y-y);
+    			float d=(float) Math.sqrt(a*a+b*b);
+    			if(d>STRAT_DRAGGIG_OFFSET){
+    				//执行开始拖动操作
+    				this.isDragging=true;
+    				this.onStartDragging(downPos.x, downPos.y, x, y);
+    			}
+    		}
+    		this.lastPos.set(x, y);
+    		this.invalidate();
+    		break;
+    	case MotionEvent.ACTION_UP:
+    		this.isDown=false;
+    		if(this.isDragging){
+    			//执行drop操作
+    			this.onDropped(downPos.x, downPos.y, x, y);
+    			this.isDragging=false;
+    		}
+
+    		this.invalidate();
+    		break;
+    	}
+
+    	super.onTouchEvent(event);
+    	return true;
+    }
+
+     //获取一个图像，从Assets目录
+    private Bitmap getImageFromAssets(String imagepath){
+    	  InputStream in=null;
+    	  try{
+    		  in= this.getContext().getAssets().open(imagepath);
+    	  }
+    	  catch(Exception e){
+
+    	  }
+    	  if(in==null) return null;
+    	  Bitmap bmp=BitmapFactory.decodeStream(in);
+    	  try {
+			in.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	  return bmp;
+    }
+}

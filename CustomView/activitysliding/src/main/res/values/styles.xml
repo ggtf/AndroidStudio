@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme">
+        <!-- Customize your theme here. -->
+        <!--<item name="windowBackground">@drawable/activity_bg</item>-->
+        <!--<item name="colorBackgroundCacheHint">@null</item>-->
+        <!--<item name="windowIsTranslucent">true</item>-->
+        <!--<item name="windowContentOverlay">@null</item>-->
+        <!--设置背景 -->
+        <item name="android:windowBackground">@drawable/activity_bg</item>
+        <!--<item name="android:windowBackground">@mipmap/bg</item>-->
+        <!-- 设置底层可见 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--<item name="android:windowIsTranslucent">false</item>-->
+        <!-- 设置跳转效果 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

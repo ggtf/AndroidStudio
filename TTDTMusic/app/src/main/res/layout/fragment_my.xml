@@ -1,0 +1,349 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+              android:orientation="vertical"
+            tools:context="com.ggtf.ttdtmusic.fragments.MyFragment"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+    <LinearLayout
+        android:id="@+id/my_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <!--Fragment布局-->
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/bizhi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/bizhi"
+                />
+
+            <GridLayout
+                android:id="@+id/login_in_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="10dp"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/user_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_column="0"
+                    android:layout_rowSpan="2"
+                    android:src="@mipmap/img_avatar_default"
+                    />
+
+                <ImageView
+                    android:id="@+id/login_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_row="0"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/login"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_row="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ttdt"
+                    />
+            </GridLayout>
+        </FrameLayout>
+        <!--分类布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/local_music"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="#a5ff15"
+                android:padding="10dp"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/local_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/music_icon"
+                    />
+
+                <ImageView
+                    android:id="@+id/local_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/local_icon"
+                    android:src="@mipmap/local_music"
+
+                    />
+
+                <TextView
+                    android:id="@+id/local_music_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/local_label"
+                    android:layout_toRightOf="@id/local_icon"
+                    android:paddingLeft="10dp"
+                    android:text="10首"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/download_music"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#a5ff15"
+                android:padding="10dp"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/download_music_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/music_icon"
+                    />
+
+                <ImageView
+                    android:id="@+id/download_music_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/download_music_icon"
+                    android:src="@mipmap/download_music"
+
+                    />
+
+                <TextView
+                    android:id="@+id/download_music_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/download_music_label"
+                    android:layout_toRightOf="@id/download_music_icon"
+                    android:paddingLeft="10dp"
+                    android:text="没有下载任务"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/music_item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/download_mv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="#a5ff15"
+                android:padding="10dp"
+                android:clickable="true"
+                >
+
+                <ImageView
+                    android:id="@+id/mv_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/music_icon"
+                    />
+
+                <ImageView
+                    android:id="@+id/mv_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/mv_icon"
+                    android:src="@mipmap/download_mv"
+
+                    />
+
+                <TextView
+                    android:id="@+id/download_mv_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mv_label"
+                    android:layout_toRightOf="@id/mv_icon"
+                    android:paddingLeft="10dp"
+                    android:text="没有下载任务"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lately_listening"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="#a5ff15"
+                android:clickable="true"
+                android:padding="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/lately_play_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/music_icon"
+                    />
+
+                <ImageView
+                    android:id="@+id/lately_play__label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/lately_play_icon"
+                    android:src="@mipmap/play_lately"
+
+                    />
+
+                <TextView
+                    android:id="@+id/lately_paly_music"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lately_play__label"
+                    android:layout_toRightOf="@id/lately_play_icon"
+                    android:paddingLeft="10dp"
+                    android:text="1首"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!--收藏和歌单布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e8e8e8"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitStart"
+                android:src="@mipmap/my_collection"
+                />
+
+            <include
+                layout="@layout/best_love"/>
+
+            <include
+                layout="@layout/collection_menu"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitStart"
+                    android:src="@mipmap/my_music_menu"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="0个"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:src="@mipmap/add_music_menu"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:clickable="true"
+                    android:src="@mipmap/manage_music_menu"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <com.ggtf.ttdtmusic.custom.MyListView
+                android:id="@+id/music_menu_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

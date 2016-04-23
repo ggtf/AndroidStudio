@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--Music Menu Color-->
+    <color name="mm_bg_normal">#FFFF1234</color>
+    <color name="mm_bg_selected">#81FF1234</color>
+    <color name="mm_header">#FF123456</color>
+    <color name="mm_list">#FF654321</color>
+    <color name="mm_list_divider">#FF123123</color>
+    <color name="mm_header_name_normal">#FF001122</color>
+    <color name="mm_header_name_pressed">#FF912222</color>
+    <color name="mm_list_item_type1_color_normal">#FF123456</color>
+    <color name="mm_list_item_type1_color_pressed">#FF654321</color>
+
+    <color name="menu_action_tv_normal">#FFFFFFFF</color>
+    <color name="menu_action_tv_pressed">#FF000000</color>
+
+    <color name="banner_circle_normal">#FF123456</color>
+    <color name="banner_circle_checked">#FF654321</color>
+
+    <color name="tv_list_view_type1_normal">#FF123456</color>
+    <color name="tv_list_view_type1_bg">#FF738023</color>
+    <color name="tv_list_view_type1_pressed">#Ff897264</color>
+
+    <color name="tv_list_view_type2_normal">#FF123456</color>
+    <color name="tv_list_view_type2_pressed">#Ff897264</color>
+    <color name="tv_list_view_type2_bg">#FF738023</color>
+
+    <color name="tv_list_view_type3_normal">#FF123456</color>
+    <color name="tv_list_view_type3_selected">#Ff897264</color>
+    <color name="tv_list_view_type3_bg">#FF738023</color>
+
+    <color name="tv_list_view_footer_normal">#FF123456</color>
+    <color name="tv_list_view_footer_pressed">#Ff897264</color>
+    <color name="tv_list_view_footer_bg">#FF738023</color>
+
+</resources>

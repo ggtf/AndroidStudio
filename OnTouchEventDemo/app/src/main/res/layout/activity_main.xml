@@ -1,0 +1,34 @@
+<com.ggtf.ontoucheventdemo.Linear
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#f0f"
+    android:id="@+id/linear"
+    >
+    <com.ggtf.ontoucheventdemo.Frame
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:background="#ff5600"
+        >
+        <com.ggtf.ontoucheventdemo.Image
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="100dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"
+            />
+    </com.ggtf.ontoucheventdemo.Frame>
+    <RelativeLayout
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        >
+    </RelativeLayout>
+
+</com.ggtf.ontoucheventdemo.Linear>
